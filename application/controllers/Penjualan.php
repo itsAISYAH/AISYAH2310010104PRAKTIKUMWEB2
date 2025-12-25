@@ -25,6 +25,8 @@ class Penjualan extends CI_Controller {
     {
         $data = array(
             'title'   => 'Tambah Data Penjualan',
+            'kustomer'=> $this->db->get('kustomer')->result_array(),
+            'user'    => $this->db->get('user')->result_array(),
             'content' => 'penjualan/add_form'
         );
         $this->load->view('template/main', $data);
@@ -43,6 +45,8 @@ class Penjualan extends CI_Controller {
     {
         $data = array(
             'title'    => 'Update Data Penjualan',
+            'kustomer' => $this->db->get('kustomer')->result_array(),
+            'user'   => $this->db->get('user')->result_array(),
             'penjualan' => $this->Penjualan_model->getById($id), 
             'content'  => 'penjualan/edit_form'
         );
@@ -63,4 +67,14 @@ class Penjualan extends CI_Controller {
         $this->Penjualan_model->delete($id);
         redirect('penjualan');
     }
+
+    public function laporan()
+    {
+        $data = array(
+            'title'   => 'Laporan Penjualan',
+            'content' => 'penjualan/laporan'
+        );
+        $this->load->view('template/main', $data);
+    }
+
 }

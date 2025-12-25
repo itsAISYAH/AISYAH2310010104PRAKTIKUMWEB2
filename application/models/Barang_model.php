@@ -6,7 +6,7 @@ class Barang_model extends CI_Model {
 
     public function getAll()
     {
-    $sql = "SELECT a.id, a.barkode, a.name, b.name AS satuan, c.name AS kategori, a.harga_beli, a.harga_jual, a.stok
+    $sql = "SELECT a.id, a.barcode, a.name, b.name AS satuan, c.name AS kategori, a.harga_beli, a.harga_jual, a.stok
             FROM barang a LEFT JOIN satuan b ON a.satuan_id = b.id LEFT JOIN kategori c ON a.kategori_id = c.id";
     return $this->db->query($sql)->result();
     }
@@ -14,7 +14,7 @@ class Barang_model extends CI_Model {
     public function save()
     {
         $data = array(
-            'barkode'       => htmlspecialchars($this->input->post('barkode'), true),
+            'barcode'       => htmlspecialchars($this->input->post('barcode'), true),
             'name'          => htmlspecialchars($this->input->post('name'), true),
             'satuan_id'     => htmlspecialchars($this->input->post('satuan_id'), true),
             'kategori_id'   => htmlspecialchars($this->input->post('kategori_id'), true),
@@ -37,7 +37,7 @@ class Barang_model extends CI_Model {
         $id = $this->input->post("id");
 
         $data = array(
-            'barkode'       => htmlspecialchars($this->input->post('barkode'), true),
+            'barcode'       => htmlspecialchars($this->input->post('barcode'), true),
             'name'          => htmlspecialchars($this->input->post('name'), true),
             'satuan_id'     => htmlspecialchars($this->input->post('satuan_id'), true),
             'kategori_id'   => htmlspecialchars($this->input->post('kategori_id'), true),

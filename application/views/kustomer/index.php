@@ -27,7 +27,6 @@
                                 <th>NIK</th>
                                 <th>Name</th>
                                 <th>Telpon</th>
-                                <th>Email</th>
                                 <th>Alamat</th>
                                 <th>Action</th>
                             </tr>
@@ -41,7 +40,6 @@
                             echo '<td>'.$kustomer->nik.'</td>';
                             echo '<td>'.$kustomer->name.'</td>';
                             echo '<td>'.$kustomer->telp.'</td>';
-                            echo '<td>'.$kustomer->email.'</td>';
                             echo '<td>'.$kustomer->alamat.'</td>';
                             echo '<td>
                                     <a href="'.site_url('kustomer/getedit/'.$kustomer->id).'" class="btn btn-sm btn-info">

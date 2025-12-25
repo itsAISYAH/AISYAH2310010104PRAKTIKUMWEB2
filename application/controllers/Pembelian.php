@@ -25,6 +25,8 @@ class Pembelian extends CI_Controller {
     {
         $data = array(
             'title'   => 'Tambah Data Pembelian',
+            'supplier'=> $this->db->get('supplier')->result_array(),
+            'user'    => $this->db->get('user')->result_array(),
             'content' => 'pembelian/add_form'
         );
         $this->load->view('template/main', $data);
@@ -42,9 +44,11 @@ class Pembelian extends CI_Controller {
     public function getedit($id)
     {
         $data = array(
-            'title'    => 'Update Data Pembelian',
+            'title'     => 'Update Data Pembelian',
+            'supplier'  => $this->db->get('supplier')->result_array(),
+            'user'      => $this->db->get('user')->result_array(),
             'pembelian' => $this->Pembelian_model->getById($id), 
-            'content'  => 'pembelian/edit_form'
+            'content'   => 'pembelian/edit_form'
         );
         $this->load->view('template/main', $data);
     }
@@ -62,5 +66,14 @@ class Pembelian extends CI_Controller {
     {
         $this->Pembelian_model->delete($id);
         redirect('pembelian');
+    }
+
+    public function laporan()
+    {
+        $data = array(
+            'title'   => 'Laporan Pembelian',
+            'content' => 'pembelian/laporan'
+        );
+        $this->load->view('template/main', $data);
     }
 }

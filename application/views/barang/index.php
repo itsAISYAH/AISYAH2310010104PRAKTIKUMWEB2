@@ -31,14 +31,14 @@
                                 <th>Stok</th>
                                 <th>Harga Beli</th>
                                 <th>Harga Jual</th>
-                                <th>Aksi</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                         <?php $no=1; foreach ($barang as $b): ?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td><?= $b->barkode ?></td>
+                                <td><?= $b->barcode ?></td>
                                 <td><?= $b->name ?></td>
                                 <td><?= $b->satuan ?></td>
                                 <td><?= $b->kategori ?></td>

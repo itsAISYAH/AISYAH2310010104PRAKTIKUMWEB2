@@ -58,12 +58,12 @@
 
                             <div class="collapse" id="pagesCollapseError">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="<?= site_url('laporan/penjualan'); ?>">Laporan Penjualan</a>
-                                    <a class="nav-link" href="<?= site_url('laporan/barang'); ?>">Laporan Barang</a>
-                                    <a class="nav-link" href="<?= site_url('laporan/stok'); ?>">Laporan Stok</a>
-                                    <a class="nav-link" href="<?= site_url('laporan/pembelian'); ?>">Laporan Pembelian</a>
-                                    <a class="nav-link" href="<?= site_url('laporan/return'); ?>">Stok Barang</a>
-                                    <a class="nav-link" href="<?= site_url('customer/kustomer'); ?>">Kustomer</a>
+                                    <a class="nav-link" href="<?= site_url('penjualan/laporan'); ?>">Laporan Penjualan</a>
+                                    <a class="nav-link" href="<?= site_url('pembelian/laporan'); ?>">Laporan Pembelian</a>
+                                    <a class="nav-link" href="<?= site_url('barang/laporan'); ?>">Laporan Barang</a>
+                                    <a class="nav-link" href="<?= site_url('stok/laporan'); ?>">Laporan Stok</a>
+                                    <a class="nav-link" href="<?= site_url('stokbarang/laporan'); ?>">Stok Barang</a>
+                                    <a class="nav-link" href="<?= site_url('kustomer/laporan'); ?>">Kustomer</a>
                                 </nav>
                             </div>
 

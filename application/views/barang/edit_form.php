@@ -13,7 +13,7 @@
 
                     <div class="mb-3">
                         <label>Barkode</label>
-                        <input class="form-control" name="barkode" value="<?= $barang->barkode ?>" required>
+                        <input class="form-control" name="barcode" value="<?= $barang->barcode ?>" required>
                     </div>
 
                     <div class="mb-3">

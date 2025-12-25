@@ -11,7 +11,7 @@
 
                     <div class="mb-3">
                         <label>Barkode</label>
-                        <input class="form-control" name="barkode" required>
+                        <input class="form-control" name="barcode" required>
                     </div>
 
                     <div class="mb-3">

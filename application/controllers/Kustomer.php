@@ -63,4 +63,13 @@ class Kustomer extends CI_Controller {
         $this->Kustomer_model->delete($id);
         redirect('kustomer');
     }
+
+    public function laporan()
+    {
+        $data = array(
+            'title'  => 'Tambah Laporan Data Kustomer',
+            'content'=> 'kustomer/laporan'
+        );
+        $this->load->view('template/main',$data);
+    }
 }
